@@ -6,5 +6,9 @@ k create deployment kubernetes-bootcamp --image=gcr.io/google-samples/kubernetes
 Expose your deployment - 
 k expose deployment/kubernetes-bootcamp --type="NodePort" --port 8080
 
+To scale up and down replicasets - 
+kubectl scale deployments/kubernetes-bootcamp --replicas=2
+
+
 Reference-
 https://minikube.sigs.k8s.io/docs/start/?arch=%2Flinux%2Fx86-64%2Fstable%2Fbinary+download#Ingress
