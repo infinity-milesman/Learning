@@ -10,5 +10,8 @@ To scale up and down replicasets -
 kubectl scale deployments/kubernetes-bootcamp --replicas=2
 
 
+To clean up your local cluster - 
+k delete deployments/kubernetes-bootcamp service/kubernetes-bootcamp
+
 Reference-
 https://minikube.sigs.k8s.io/docs/start/?arch=%2Flinux%2Fx86-64%2Fstable%2Fbinary+download#Ingress
