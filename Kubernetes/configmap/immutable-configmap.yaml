@@ -1,0 +1,8 @@
+apiVersion: v1
+data:
+  company_name: "Acme Corporation"
+kind: ConfigMap
+immutable: true
+metadata:
+  name: company-name-20150801
+  
