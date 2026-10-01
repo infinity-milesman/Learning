@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: api-config
+  namespace: shop
+data:
+  app.properties: |
+    db.host=redis
+    db.port=6379
+    feature.discounts=true
