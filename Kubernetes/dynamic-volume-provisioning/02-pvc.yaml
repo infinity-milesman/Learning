@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: app-data
+  namespace: storage-lab
+spec:
+  accessModes: ["ReadWriteOnce"]
+  storageClassName: local-delete
+  resources:
+    requests:
+      storage: 1Gi

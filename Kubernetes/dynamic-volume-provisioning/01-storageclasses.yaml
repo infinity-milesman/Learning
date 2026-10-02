@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: storage-lab
+
+---
+
+#Volumes are deleted when the PVC is deleted
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: local-delete
+provisioner: rancher.io/local-path
+reclaimPolicy: Delete
+volumeBindingMode: WaitForFirstConsumer
+
+---
+#Volumes are kept (status released) when the PVC is deleted
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: local-retain
+provisioner: rancher.io/local-path
+reclaimPolicy: Retain
+volumeBindingMode: WaitForFirstConsumer
